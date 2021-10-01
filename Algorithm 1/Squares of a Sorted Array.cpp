@@ -25,6 +25,8 @@ public:
         
         int n=nums.size();
         
+        int t=n-1;
+        
         vector<int> v(n);
         
         int left=0;
@@ -36,13 +38,13 @@ public:
             int y=pow(nums[right],2);
             
             if(x>y){
-                v[--n]=x;
+                v[t--]=x;
                 left++;
                 
             }
             
             else {
-                v[--n]=y;
+                v[t--]=y;
                 right--;
                 
             }
