@@ -11,6 +11,8 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+// method 1 recursion
+
 class Solution {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
@@ -27,3 +29,33 @@ public:
         
     }
 };
+
+
+// method 2 iteration
+
+/*class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        
+        vector<int> ans;
+        if(!root)return ans;
+        
+        stack<TreeNode*>s;
+        
+        while(root!=NULL || !s.empty()){
+            
+            while(root!=NULL){
+                ans.push_back(root->val);
+                s.push(root);
+                root=root->left;
+                
+            }
+            
+            root=s.top();
+            s.pop();
+            root=root->right;
+        }
+        
+        return ans;
+    }
+};*/
