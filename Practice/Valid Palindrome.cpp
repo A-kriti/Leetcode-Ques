@@ -27,14 +27,9 @@ public:
               
         }
         
-        
-        
-        string a=r;
-        reverse(a.begin(),a.end());
-        
-        for(int i=0;i<r.size();i++){
+        for(int i=0;i<r.size()/2;i++){
             
-            if(a[i]!=r[i]){
+            if(r[i]!=r[r.size()-1-i]){
                 return false;
             }
         }
