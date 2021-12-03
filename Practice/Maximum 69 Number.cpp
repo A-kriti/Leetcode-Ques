@@ -31,5 +31,18 @@ public:
         
         return ans;
         
+        
+        //method 2
+//         string s=to_string(num);
+//         for(auto &x:s){
+            
+//             if(x=='6'){
+//                 x='9';
+//                 break;
+//             }
+//         }
+        
+//         return stoi(s);
+        
     }
 };
