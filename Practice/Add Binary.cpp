@@ -11,7 +11,7 @@ public:
         int carry=0;
         string ans="";
         
-        while(i>=0 || j>=0){
+        while(i>=0 || j>=0){ 
             sum=carry;
             if(i>=0)sum+=a[i]-'0';
             if(j>=0)sum+=b[j]-'0';
